@@ -106,8 +106,8 @@ my $index = q {}; #q funtion used instead of single quotes
 
 foreach my $key (keys %$resultat) {
 	#verb("OID : $key, Desc : $$resultat{$key}");
-	if ($resultat->{$key} =~ /Physical Memory/) {
-		$index = substr $key, -1, 1;
+	if ($resultat->{$key} eq 'Physical Memory') {
+		$index = substr $key, 23;
 		#verb("index : $index");			
 	}
 }
@@ -150,18 +150,10 @@ $exit_val = $ERRORS{"OK"};
 if ($used_percent > $o_crit) {
     printf("Memory CRITICAL: at %d%% with %0.2f GB of %0.2f GB free\n", $used_percent, $free_GB, $size_GB);
     $exit_val = $ERRORS{"CRITICAL"};
-}
-if ($used_percent > $o_warn && $used_percent < $o_crit) {
+} elsif ($used_percent > $o_warn) {
     printf("Memory WARNING: at %d%% with %0.2f GB of %0.2f GB free\n", $used_percent, $free_GB, $size_GB);
     $exit_val = $ERRORS{"WARNING"};
 }	
 printf("Memory OK: at %d%% with %0.2f GB of %0.2f GB free\n", $used_percent, $free_GB, $size_GB) if ($exit_val eq $ERRORS{"OK"});
 
 exit $exit_val;
-
-
-
-
-
-
-
