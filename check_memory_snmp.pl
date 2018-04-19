@@ -157,3 +157,5 @@ if ($used_percent > $o_crit) {
 printf("Memory OK: at %d%% with %0.2f GB of %0.2f GB free\n", $used_percent, $free_GB, $size_GB) if ($exit_val eq $ERRORS{"OK"});
 
 exit $exit_val;
+
+
