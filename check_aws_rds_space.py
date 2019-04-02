@@ -3,7 +3,6 @@ import sys
 from optparse import OptionParser
 import boto3
 from datetime import datetime, timedelta
-import os
 
 usage = "usage: %prog --name rds_instance_name"
 parser = OptionParser(usage=usage)
