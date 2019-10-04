@@ -3,7 +3,7 @@
 These are Nagios plugins to monitor different devices and resources.   
 
 
-**Configure Nagios to monitor VMware infrastructure automatically**
+**Automating Nagios configuration to monitor VMware infrastructure dynamically**
 
 The script **_configure_nagios.py_** allows you to add all your ESXi hosts, VMs and datastores to Nagios automatically. 
 The sciript will connect to vCenter Server and create all the required configuration files in Nagios to monitor your VMware infrastructure. 
