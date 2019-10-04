@@ -16,8 +16,9 @@ parser.add_option("--vm_uuid", action="store", type="string", dest="vm_uuid", he
 (options, args) = parser.parse_args()
 
 
-s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
-s.verify_mode = ssl.CERT_NONE
+#s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+#s.verify_mode = ssl.CERT_NONE
+s = ssl._create_unverified_context()
 
 c = SmartConnect(host="IP", user="nagios@vsphere.local", pwd="password", sslContext=s)
 
@@ -26,7 +27,7 @@ content = c.RetrieveContent()
 #vm_uuid = '5032ea24-02c5-f1ba-6ca5-05d08d2ff8cc'
 vm_uuid = options.vm_uuid
 search_index = content.searchIndex
-# quick/dirty way to find an ESXi host
+# quick way to find a VM
 vm = search_index.FindByUuid(uuid=vm_uuid, vmSearch=True, instanceUuid=True)
 
 
