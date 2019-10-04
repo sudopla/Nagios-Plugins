@@ -1,22 +1,16 @@
-##Nagios Plugins
+**Nagios Plugins**
 
 These are Nagios plugins to monitor different devices and resources.   
 
 
-##Automating Nagios Configuration of VMware infrastructure
+**Automating Nagios Monitoring of VMware infrastructure**
 
-The script **configure_nagios** allows you to add all your ESXi hosts, VMs and datastores to Nagios automatically. 
+The script **_configure_nagios.py_** allows you to add all your ESXi hosts, VMs and datastores to Nagios automatically. 
 The sciript will connect to vCenter Server and create all the required configuration files in Nagios to monitor your VMware infrastructure. 
 
-Resources that will be monitored: 
- VMs
-  - CPU
-  - Memory
-  - Virtual Disks space usage
-  - Snapshots Size
- ESXi hosts
-  - CPU
-  - Memory
+Resources that will be monitored:<br/> 
+ VMs - CPU, Memory, Virtual Disks, Snapshots Size<br/>
+ ESXi hosts - CPU, Memory <br/>
  Datastores usage
  
  Copy the nagios plugins showed below to - /usr/lib/nagios/plugins/
