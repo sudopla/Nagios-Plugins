@@ -14,9 +14,9 @@ parser = OptionParser(usage=usage)
 parser.add_option("--host_name", action="store", type="string", dest="host_name", help="Host Name")
 (options, args) = parser.parse_args()
 
-
-s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
-s.verify_mode = ssl.CERT_NONE
+#s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+#s.verify_mode = ssl.CERT_NONE
+s = ssl._create_unverified_context()
 
 c = SmartConnect(host="IP", user="nagios@vsphere.local", pwd="password", sslContext=s)
 
