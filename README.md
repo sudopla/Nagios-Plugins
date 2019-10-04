@@ -4,7 +4,7 @@ Nagios Plugins
 These are Nagios plugins to monitor different devices and resources.   
 
 
-**Automating Nagios monitoring of VMware infrastructure**
+Configure Nagios to monitor VMware infrastructure automatically
 =====
 
 The script **_configure_nagios.py_** allows you to add all your ESXi hosts, VMs and datastores to Nagios automatically. 
