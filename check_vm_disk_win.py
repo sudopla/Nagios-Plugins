@@ -17,8 +17,9 @@ parser.add_option("-p", "--partition", action="store", type="string", dest="part
 (options, args) = parser.parse_args()
 
 
-s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
-s.verify_mode = ssl.CERT_NONE
+#s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+#s.verify_mode = ssl.CERT_NONE
+s = ssl._create_unverified_context()
 
 c = SmartConnect(host="IP", user="nagios@vsphere.local", pwd="password", sslContext=s)
 
@@ -28,7 +29,7 @@ content = c.RetrieveContent()
 vm_uuid = options.vm_uuid
 partition = options.partition + ':\\'
 search_index = content.searchIndex
-# quick/dirty way to find an ESXi host
+# quick way to find a VM
 vm = search_index.FindByUuid(uuid=vm_uuid, vmSearch=True, instanceUuid=True)
 
 disk_found = False
