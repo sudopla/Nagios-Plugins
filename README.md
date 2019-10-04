@@ -1,4 +1,4 @@
 ###Nagios Plugins
 
-These are nagios plugins that use SNMP to monitor different resources or sensors from different equipment and operating systems.  
+These are nagios plugins to monitor different devices and resources.   
 
