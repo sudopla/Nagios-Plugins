@@ -9,7 +9,7 @@ These are Nagios plugins to monitor different devices and resources.
 The script **_configure_nagios.py_** allows you to add all your ESXi hosts, VMs and datastores to Nagios automatically. 
 The sciript will connect to vCenter Server and create all the required configuration files in Nagios to monitor your VMware infrastructure. 
 
-You will have to install `pyVmomi <https://github.com/vmware/pyvmomi>`_ in the Nagios server before running these scripts. 
+You will have to install [pyVmomi] (https://github.com/vmware/pyvmomi) in the Nagios server before running these scripts. 
 
 Resources that will be monitored:<br/> 
  VMs - CPU, Memory, Virtual Disks, Snapshots Size<br/>
