@@ -16,8 +16,9 @@ parser.add_option("--cluster_name", action="store", type="string", dest="cluster
 
 (options, args) = parser.parse_args()
 
-s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
-s.verify_mode = ssl.CERT_NONE
+#s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+#s.verify_mode = ssl.CERT_NONE
+s = ssl._create_unverified_context()
 
 c = SmartConnect(host="IP", user="nagios@vsphere.local", pwd="password", sslContext=s)
 
