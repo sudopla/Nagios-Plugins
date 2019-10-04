@@ -1,4 +1,4 @@
 ###Nagios Plugins
 
-These are nagios plugins to monitor different devices and resources.   
+These are Nagios plugins to monitor different devices and resources.   
 
