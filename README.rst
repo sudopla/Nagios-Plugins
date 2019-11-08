@@ -1,5 +1,3 @@
-pyVmomi is the Python SDK for the VMware vSphere API that allows you to manage 
-ESX, ESXi, and vCenter.
 
 Nagios Plugins
 ================
